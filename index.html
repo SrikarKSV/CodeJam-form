@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Survey Form</title>
         <link rel="stylesheet" href="./style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat&family=Neucha&display=swap"
+            rel="stylesheet">
+        <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     </head>
 
     <body>
@@ -14,6 +17,18 @@
                 <h1 id="title">Code Jam</h1>
                 <p id="description">Put your coding skills to the test.</p>
             </header>
+            <div class="form">
+                <form action="#" id="survey-form">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required autocomplete="off">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required autocomplete="off">
+
+                    <label for="number">Age(Optional)</label>
+                    <input type="number" name="number" id="number" min="13" max="90">
+
+                </form>
+            </div>
         </div>
     </body>
 
