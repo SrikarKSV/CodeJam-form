@@ -1,0 +1,12 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: url(./images/pexels-vlada-karpovich-4050299.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0% 30%;
+}
