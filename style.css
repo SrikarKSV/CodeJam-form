@@ -159,45 +159,45 @@ input[type="radio"]:checked + label[for="group"] {
 	margin: 1.2rem 0 0.5rem;
 }
 
-#check-box {
+#check-box-container {
 	margin-top: 1rem;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
-#check-box label {
+#check-box-container label {
 	display: inline-block;
 	margin-bottom: 0.5rem;
 }
 
-.python-uncheck {
+#python {
 	background: url(./images/check-box/python.png) no-repeat;
 }
 
-.javascript-uncheck {
+#javascript {
 	background: url(./images/check-box/js.png) no-repeat;
 }
 
-.ruby-uncheck {
+#ruby {
 	background: url(./images/check-box/ruby.png) no-repeat;
 }
-.go-uncheck {
+#go {
 	background: url(./images/check-box/go.png) no-repeat;
 }
-.php-uncheck {
+#php {
 	background: url(./images/check-box/php.png) no-repeat;
 }
-.c-hash-uncheck {
+#c-hash {
 	background: url(./images/check-box/c-hash.png) no-repeat;
 }
-.java-uncheck {
+#java {
 	background: url(./images/check-box/java.png) no-repeat;
 }
-.cplus-uncheck {
+#cplus {
 	background: url(./images/check-box/c++.png) no-repeat;
 }
 
-#check-box label {
+#check-box-container label {
 	background-position: 0 -5px;
 	background-size: 2.5rem;
 	cursor: pointer;
@@ -208,24 +208,21 @@ input[type="radio"]:checked + label[for="group"] {
 	filter: invert(100%);
 }
 
-#check-box .check {
+#check-box-container input:checked + label[for="python"],
+#check-box-container input:checked + label[for="javascript"],
+#check-box-container input:checked + label[for="go"],
+#check-box-container input:checked + label[for="cplus"],
+#check-box-container input:checked + label[for="php"],
+#check-box-container input:checked + label[for="c-hash"],
+#check-box-container input:checked + label[for="ruby"],
+#check-box-container input:checked + label[for="java"] {
+	background-position: -2px -45px;
 	filter: invert(0%);
 	color: white;
 	background-size: 2.8rem;
 }
 
-#check-box .python-check,
-#check-box .javascript-check,
-#check-box .go-check,
-#check-box .php-check,
-#check-box .cplus-check,
-#check-box .c-hash-check,
-#check-box .ruby-check,
-#check-box .java-check {
-	background-position: 0 -45px;
-}
-
-#check-box .php-check {
-	background-position: -6px -60px;
-	background-size: 3.8rem;
+#check-box-container input:checked + label[for="php"] {
+	background-position: -12px -65px;
+	background-size: 4rem;
 }
