@@ -128,31 +128,31 @@ label[for='single'],
 label[for='group'] {
 	display: inline-block;
 	margin-top: 0.8rem;
-	padding-left: 2.5rem;
+	padding: 0.1rem 0 0 2.5rem;
 	background: url(./images/icons8-radio-button-48.png) no-repeat;
-	background-position: 0 -2.5px;
-	background-size: 1.5rem;
+	background-position: 0 -2.1px;
+	background-size: 1.6rem;
 	cursor: pointer;
 	transition: 0.3s ease-out;
 	width: 30%;
+	height: 1.5rem;
 }
 
 input[type="radio"]:checked + label[for="single"],
 input[type="radio"]:checked + label[for="group"] {
-	background-position: 0 0;
 	color: #f16f23;
 	filter: invert(100%);
 }
 input[type="radio"]:checked + label[for="single"] {
 	background: url(./images/single.png) no-repeat;
 	background-size: 1rem;
-	background-position: 4px 2px;
+	background-position: 4px 2.5px;
 }
 
 input[type="radio"]:checked + label[for="group"] {
 	background: url(./images/team.png) no-repeat;
 	background-size: 1.1rem;
-	background-position: 4px 0px;
+	background-position: 4px 1px;
 }
 
 #languages-para {
@@ -170,30 +170,30 @@ input[type="radio"]:checked + label[for="group"] {
 	margin-bottom: 0.5rem;
 }
 
-#python {
+label.python {
 	background: url(./images/check-box/python.png) no-repeat;
 }
 
-#javascript {
+label.javascript {
 	background: url(./images/check-box/js.png) no-repeat;
 }
 
-#ruby {
+label.ruby {
 	background: url(./images/check-box/ruby.png) no-repeat;
 }
-#go {
+label.go {
 	background: url(./images/check-box/go.png) no-repeat;
 }
-#php {
+label.php {
 	background: url(./images/check-box/php.png) no-repeat;
 }
-#c-hash {
+label.c-hash {
 	background: url(./images/check-box/c-hash.png) no-repeat;
 }
-#java {
+label.java {
 	background: url(./images/check-box/java.png) no-repeat;
 }
-#cplus {
+label.cplus {
 	background: url(./images/check-box/c++.png) no-repeat;
 }
 
@@ -225,4 +225,15 @@ input[type="radio"]:checked + label[for="group"] {
 #check-box-container input:checked + label[for="php"] {
 	background-position: -12px -65px;
 	background-size: 4rem;
+}
+
+#explain {
+	margin-top: 0.5rem;
+	border-radius: 5px;
+	min-height: 8rem;
+	width: 100%;
+	padding: 0.5rem;
+	font-size: 1.2rem;
+	resize: vertical;
+	outline: none;
 }
