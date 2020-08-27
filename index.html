@@ -30,7 +30,7 @@
 
                     <p>Which option best describes your current role ?</p>
                     <div id="select">
-                        <select name="current-role" id="dropdown">
+                        <select name="current-role" id="dropdown" required>
                             <option value=" student">Student</option>
                             <option value="full-time-job">Full time job</option>
                             <option value="full-time-leaner">Full time learner</option>
@@ -39,11 +39,35 @@
                         </select>
                     </div>
                     <p>How are you going to attend ?</p>
-                    <input type="radio" name="no-people" id="single" value="single">
+                    <input type="radio" name="no-people" id="single" value="single" required>
                     <label for="single" class="no-people">Single</label>
                     <input type="radio" name="no-people" id="group" value="group">
                     <label for="group" class="no-people">Group</label>
-                    <p>Which of the following languages will you be using ?</p>
+                    <div id="check-box">
+                        <p id="languages">Which of the following languages will you be using ?</p>
+                        <input type="checkbox" name="python" id="language">
+                        <label for="language">Python</label>
+                        <br>
+                        <input type="checkbox" name="javascript" id="language">
+                        <label for="language">JavaScript</label>
+                        <br>
+                        <input type="checkbox" name="ruby" id="language">
+                        <label for="language">Ruby</label>
+                        <br>
+                        <input type="checkbox" name="go" id="language">
+                        <label for="language">Go</label>
+                        <br>
+                        <input type="checkbox" name="php" id="language">
+                        <label for="language">PHP</label>
+                        <br>
+                        <input type="checkbox" name="c#" id="language">
+                        <label for="language">C#</label><br>
+                        <input type="checkbox" name="java" id="language">
+                        <label for="language">Java</label>
+                        <br>
+                        <input type="checkbox" name="c++" id="language">
+                        <label for="language">C++</label>
+                    </div>
                 </form>
             </div>
         </div>

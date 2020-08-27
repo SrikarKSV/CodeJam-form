@@ -8,10 +8,11 @@
 	background: url(./images/background-main.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 100vh;
 	background-position: 0% 100%;
+	background-attachment: fixed;
 	position: relative;
 	z-index: 0;
+	padding: 1px;
 }
 #main::after {
 	content: "";
@@ -50,6 +51,7 @@ header {
 .form {
 	max-width: 40rem;
 	margin: auto;
+	margin-bottom: 4rem;
 	padding: 3rem 5rem;
 	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 10px;
@@ -126,7 +128,7 @@ label[for='group'] {
 	display: inline-block;
 	margin-top: 0.8rem;
 	padding-left: 2.5rem;
-	background: url(./images/radio-uncheck.png) no-repeat;
+	background: url(./images/icons8-radio-button-48.png) no-repeat;
 	background-position: 0 -2.5px;
 	background-size: 1.5rem;
 	cursor: pointer;
@@ -143,11 +145,21 @@ input[type="radio"]:checked + label[for="group"] {
 input[type="radio"]:checked + label[for="single"] {
 	background: url(./images/single.png) no-repeat;
 	background-size: 1rem;
-	background-position: 4px 0;
+	background-position: 4px 2px;
 }
 
 input[type="radio"]:checked + label[for="group"] {
 	background: url(./images/team.png) no-repeat;
 	background-size: 1.1rem;
 	background-position: 4px 0px;
+}
+
+#languages {
+	margin: 1.2rem 0 0.5rem;
+}
+
+#check-box label {
+	display: inline-block;
+	margin-bottom: 1rem;
+	margin-left: 1rem;
 }
