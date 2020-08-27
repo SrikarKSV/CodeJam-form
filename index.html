@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="./style.css">
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat&family=Neucha&display=swap"
             rel="stylesheet">
-        <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     </head>
 
     <body>
@@ -19,14 +19,31 @@
             </header>
             <div class="form">
                 <form action="#" id="survey-form">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" required autocomplete="off">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required autocomplete="off">
+                    <label for="name" id="name-label">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required autocomplete="off">
+                    <label for="email" id="email-label">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required
+                        autocomplete="off">
 
-                    <label for="number">Age(Optional)</label>
-                    <input type="number" name="number" id="number" min="13" max="90">
+                    <label for="number" id="number-label">Age(Optional)</label>
+                    <input type="number" name="number" id="number" placeholder="Age" min="13" max="90">
 
+                    <p>Which option best describes your current role ?</p>
+                    <div id="select">
+                        <select name="current-role" id="dropdown">
+                            <option value=" student">Student</option>
+                            <option value="full-time-job">Full time job</option>
+                            <option value="full-time-leaner">Full time learner</option>
+                            <option value="prefer-not-to-say">Prefer not to say</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <p>How are you going to attend ?</p>
+                    <input type="radio" name="no-people" id="single" value="single">
+                    <label for="single" class="no-people">Single</label>
+                    <input type="radio" name="no-people" id="group" value="group">
+                    <label for="group" class="no-people">Group</label>
+                    <p>Which of the following languages will you be using ?</p>
                 </form>
             </div>
         </div>

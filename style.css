@@ -48,7 +48,7 @@ header {
 }
 
 .form {
-	max-width: 40%;
+	max-width: 40rem;
 	margin: auto;
 	padding: 3rem 5rem;
 	background-color: rgba(0, 0, 0, 0.7);
@@ -66,15 +66,88 @@ label {
 	display: block;
 }
 
-input {
-	margin: 0.3rem 0 1rem;
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+	margin: 0.3rem 0 1.2rem;
 	width: 100%;
-	height: 2rem;
+	height: 2.2rem;
 	outline: none;
 	border-radius: 3px;
 	border: 0;
 	padding: 10px;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	background: rgba(255, 255, 255, 0.7);
+}
+
+select {
+	padding: 0 10px;
+	appearance: none;
+	position: relative;
+}
+
+#select {
+	position: relative;
+}
+
+#select::before,
+#select::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: rgba(0, 0, 0, 0.7);
+	pointer-events: none;
+	z-index: 1;
+	font-size: 0.8rem;
+}
+
+#select::before {
+	content: "\25B2";
+	padding: 0.5rem 0.7rem 0;
+}
+
+#select::after {
+	content: "\25BC";
+	padding: 1.4rem 0.7rem 0;
+}
+
+input[type="radio"] {
+	opacity: 0;
+	width: 0;
+	margin: 0;
+	position: absolute;
+	right: -300px;
+}
+
+label[for='single'],
+label[for='group'] {
+	display: inline-block;
+	margin-top: 0.8rem;
+	padding-left: 2.5rem;
+	background: url(./images/radio-uncheck.png) no-repeat;
+	background-position: 0 -2.5px;
+	background-size: 1.5rem;
+	cursor: pointer;
+	transition: 0.3s ease-out;
+	width: 30%;
+}
+
+input[type="radio"]:checked + label[for="single"],
+input[type="radio"]:checked + label[for="group"] {
+	background-position: 0 0;
+	color: #f16f23;
+	filter: invert(100%);
+}
+input[type="radio"]:checked + label[for="single"] {
+	background: url(./images/single.png) no-repeat;
+	background-size: 1rem;
+	background-position: 4px 0;
+}
+
+input[type="radio"]:checked + label[for="group"] {
+	background: url(./images/team.png) no-repeat;
+	background-size: 1.1rem;
+	background-position: 4px 0px;
 }
