@@ -24,9 +24,8 @@
 	pointer-events: none;
 	z-index: -1;
 }
-
+/************************************** Header **************************************/
 header {
-	min-width: 50vw;
 	margin: auto;
 	text-align: center;
 	height: 8rem;
@@ -36,6 +35,7 @@ header {
 	align-items: center;
 	margin: 0.5rem auto 2rem;
 }
+
 #title {
 	font-family: 'Neucha', cursive;
 	font-size: 4rem;
@@ -49,6 +49,7 @@ header {
 	color: #393e46;
 }
 
+/****************************************** Form ******************************************/
 .form {
 	max-width: 40rem;
 	margin: auto;
@@ -68,7 +69,7 @@ header {
 label {
 	display: block;
 }
-
+/******************************** NAME, EMAIL, AGE ********************************/
 input[type="text"],
 input[type="email"],
 input[type="number"],
@@ -86,11 +87,11 @@ select {
 }
 
 input[type="text"]:valid,
-input[type="email"]:valid,
-input[type="number"]:valid {
-	outline-color: #5cdb95;
+input[type="email"]:valid {
+	border: 2px solid #5cdb95;
 }
 
+/************************************ Current role ************************************/
 select {
 	padding: 0 10px;
 	appearance: none;
@@ -122,6 +123,7 @@ select {
 	padding: 1.2rem 0.7rem 0;
 }
 
+/******************************************* SINGLE, GROUP********************************************/
 input[type="radio"],
 input[type="checkbox"] {
 	opacity: 0;
@@ -134,8 +136,8 @@ label[for='single'],
 label[for='group'] {
 	display: inline-block;
 	margin-top: 0.8rem;
-	padding: 0.2rem 0 0 2.5rem;
-	background: url(./images/icons8-radio-button-48.png) no-repeat;
+	padding: 0.1rem 0 0 2.5rem;
+	background: url(./images/radiobutton.png) no-repeat;
 	background-position: 0 0px;
 	background-size: 1.6rem;
 	cursor: pointer;
@@ -162,6 +164,7 @@ input[type="radio"]:checked + label[for="group"] {
 	background-position: 4px 4px;
 }
 
+/*********************************** Languages checkbox ***********************************/
 #languages-para {
 	margin: 1.2rem 0 0.5rem;
 }
@@ -205,7 +208,7 @@ label.cplus {
 }
 
 #check-box-container label {
-	background-position: 0 -5px;
+	background-position: 0 -3px;
 	background-size: 2.5rem;
 	cursor: pointer;
 	transition: 0.2s ease-out;
@@ -235,6 +238,7 @@ label.cplus {
 	background-size: 4rem;
 }
 
+#check-box-container input:checked + label[for="c-hash"],
 #check-box-container input:checked + label[for="cplus"] {
 	background-position: -1px -42px;
 }
@@ -271,6 +275,7 @@ label.cplus {
 	color: #7297e7;
 }
 
+/************************************************* Textarea *************************************************/
 #explain {
 	margin-top: 0.5rem;
 	border-radius: 5px;
@@ -279,21 +284,49 @@ label.cplus {
 	padding: 0.5rem;
 	font-size: 1.1rem;
 	resize: vertical;
-	outline: none;
 	background: rgba(255, 255, 255, 0.9);
 	outline-color: #5cdb95;
 	font-family: 'Poppins', sans-serif;
 }
 
+/********************************************** Submit **********************************************/
 #submit {
 	display: block;
 	border: none;
 	width: 25%;
-	height: 2rem;
+	height: 2.2rem;
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.05rem;
-	border-radius: 10px;
+	border-radius: 6px;
 	margin: 0.8rem auto;
-	outline: none;
+	outline-color: #5cdb95;
+	background: rgba(255, 255, 255, 0.8);
 	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+	transition: all .2s ease-in-out;
+}
+
+#submit:before {
+	content: '';
+	background: linear-gradient(to right, #68b0ab, #8fc0a9);
+	border-radius: 2px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	transition: all .3s ease-in-out;
+	transform: translate(-100%);
+	transform-origin: left bottom;
+}
+
+#submit:hover {
+	letter-spacing: 1px;
+}
+
+#submit:hover:before {
+	transform: translate(0);
 }
